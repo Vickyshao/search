@@ -1,5 +1,5 @@
 const path = require('path');
-// const UglifyjsPlugin = require('uglifyjs-webpack-plugin');
+const UglifyjsPlugin = require('uglifyjs-webpack-plugin');
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -34,24 +34,20 @@ module.exports = {
   configureWebpack: (config) => {
     config.entry = ['babel-polyfill', './src/main.js'];
   },
-  // configureWebpack: {
-  //   resolve: {
-  //     alias: {
-  //       '@': resolve('src'),
-  //     },
-  //   },
-  //   optimization: {
-  //     minimizer: [
-  //       new UglifyjsPlugin({
-  //         uglifyOptions: {
-  //           compress: {
-  //             warnings: false,
-  //             drop_console: true, // consoledrop_debugger:false,
-  //             pure_funcs: ['console.log'], // 移除console
-  //           },
-  //         },
-  //       }),
-  //     ],
-  //   },
-  // },
+  configureWebpack: {
+    optimization: {
+      minimizer: [
+        new UglifyjsPlugin({
+          uglifyOptions: {
+            compress: {
+              warnings: false,
+              drop_debugger: true,
+              drop_console: true, // 把console.log()注释掉
+              // pure_funcs: ['console.log'], // 把console.log()移除掉
+            },
+          },
+        }),
+      ],
+    },
+  },
 };
