@@ -11,7 +11,7 @@
       <div :key="i" v-for="(nav, i) in $store.state.navTree">
         <el-submenu :index="i" v-if="nav.children && nav.children.length">
           <template slot="title">
-            <i class="el-icon-location"></i>
+            <i class="iconfont" :class="nav.icon"></i>
             <span>{{nav.name}}</span>
           </template>
           <el-menu-item :key="j" v-for="(child, j) in nav.children" @click="jumpTo(child)">
@@ -19,7 +19,7 @@
           </el-menu-item>
         </el-submenu>
         <el-menu-item :index="i" v-if="!nav.children || !nav.children.length">
-          <i class="el-icon-menu"></i>
+          <i  class="iconfont" :class="nav.icon"></i>
           <span slot="title" @click="jumpTo(nav)">{{nav.name}}</span>
         </el-menu-item>
       </div>
@@ -45,3 +45,15 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.el-aside {
+  .el-menu {
+    .el-submenu__title {
+      text-align: left !important;
+    }
+    .el-menu-item {
+      text-align: left !important;
+    }
+  }
+}
+</style>

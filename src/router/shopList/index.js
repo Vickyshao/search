@@ -1,6 +1,7 @@
 export default {
   name:'商品管理',
   path: '/shopManage',
+  icon: 'icontag',
   redirect: '/shopManage/addGoods',
   component: () => import('@/layouts/index.vue'),
   children: [{
