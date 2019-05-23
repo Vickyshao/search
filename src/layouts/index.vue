@@ -21,6 +21,7 @@
 
 <script>
 import '../assets/css/common.scss';
+import '../assets/css/reset.scss';
 import '../assets/css/iconFont/iconfont.css';
 import '../assets/css/iconFont/iconfont';
 import AppHeader from './header.vue';
