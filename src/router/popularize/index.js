@@ -1,14 +1,15 @@
 export default {
-  path: '/popularize',
   name: '店铺推广',
-  template: '<router-view></router-view>',
+  path: '/popularize',
+  redirect: '/popularize/survey',
+  component: () => import('@/layouts/index.vue'),
   children: [{
-    path: '/survey',
     name: '推广概括',
+    path: '/popularize/survey',
     component: () => import( /* webpackChunkName: "module-popularize" */ '@/components/popularize/survey.vue'),
   }, {
-    path: '/HelloWorld',
     name: 'hello',
+    path: '/popularize/HelloWorld',
     component: () => import( /* webpackChunkName: "module-popularize" */ '@/components/popularize/HelloWorld.vue'),
   }]
 
