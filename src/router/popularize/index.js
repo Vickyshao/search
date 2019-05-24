@@ -3,6 +3,7 @@ export default {
   path: '/popularize',
   icon: 'iconshare',
   redirect: '/popularize/survey',
+  isMultiMenu: true,
   component: () => import('@/layouts/index.vue'),
   children: [{
     name: '推广概括',

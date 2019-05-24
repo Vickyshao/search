@@ -9,7 +9,7 @@
       <!-- @open="handleOpen"
       @close="handleClose" -->
       <div :key="i" v-for="(nav, i) in $store.state.navTree">
-        <el-submenu :index="i.toString()" v-if="nav.children && nav.children.length">
+        <el-submenu :index="i.toString()" v-if="nav.isMultiMenu">
           <template slot="title">
             <i class="iconfont" :class="nav.icon"></i>
             <span>{{nav.name}}</span>
@@ -18,7 +18,7 @@
            {{child.name}}
           </el-menu-item>
         </el-submenu>
-        <el-menu-item :index="i.toString()" v-if="!nav.children || !nav.children.length">
+        <el-menu-item :index="i.toString()" v-if="!nav.isMultiMenu">
           <i  class="iconfont" :class="nav.icon"></i>
           <span slot="title" @click="jumpTo(nav)">{{nav.name}}</span>
         </el-menu-item>
@@ -29,6 +29,8 @@
 
 <script>
 export default {
+  created() {
+  },
   methods: {
     // handleOpen(key, keyPath) {
     //   console.log(key, keyPath);

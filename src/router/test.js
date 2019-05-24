@@ -3,6 +3,7 @@ export default {
   path: '/hello',
   icon: 'iconxiaoxi',
   redirect: '/hello',
+  isMultiMenu: false,
   component: () => import('@/layouts/index.vue'),
   children: [{
     name: 'hello',

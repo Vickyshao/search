@@ -3,9 +3,10 @@ export default {
   path: '/shopManage',
   icon: 'icontag',
   redirect: '/shopManage/addGoods',
+  isMultiMenu: true,
   component: () => import('@/layouts/index.vue'),
   children: [{
-    name: '商品管理',
+    name: '增加商品',
     path: '/shopManage/addGoods',
     component: () => import( /* webpackChunkName: "module-shopManage" */ '@/components/shopList/addGoods.vue'),
   }, {
