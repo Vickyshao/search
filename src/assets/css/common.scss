@@ -32,7 +32,6 @@ body>.el-container {
   line-height: 260px;
 }
 
-.el-container:nth-child(7) .el-aside {
-  line-height: 320px;
-}
+.el-container:nth-child(7) .el-aside { line-height: 320px; }
 .iconfont { font-size: 20px !important; }
+.cursor { cursor: pointer; }

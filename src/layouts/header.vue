@@ -1,9 +1,9 @@
 <template>
   <div class="header">
-    <img src="../assets/imgs/logo.png"/>
+    <img class="cursor" @click="toHome" src="../assets/imgs/logo.png"/>
     <span class="backHome">
       <div>商户管理后台</div>
-      <div><span class="iconfont iconhome"></span>返回首页</div>
+      <div class="cursor" @click="toHome"><span class="iconfont iconhome"></span>返回首页</div>
     </span>
     <div class="userInfos">
       <span>welcome, 周四商家（周四商家）</span>
@@ -12,6 +12,19 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    toHome() {
+      this.$router.push({
+        path: '/',
+      });
+    },
+  },
+};
+</script>
+
 
 <style lang="scss" scoped>
 .header {

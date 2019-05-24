@@ -8,7 +8,7 @@ function resolve(dir) {
 module.exports = {
   // publicPath: './',
   outputDir: 'dist',
-  runtimeCompiler: true,
+  // runtimeCompiler: true,
   lintOnSave: process.env.NODE_ENV === 'production' ? true : 'error',
   productionSourceMap: false,
   chainWebpack: (config) => {
