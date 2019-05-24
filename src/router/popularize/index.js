@@ -1,13 +1,13 @@
 export default {
-  name: '店铺推广',
+  name: '推广概况',
   path: '/popularize',
   icon: 'iconshare',
-  redirect: '/popularize/survey',
+  redirect: '/popularize/accOverview',
   isMultiMenu: true,
   component: () => import('@/layouts/index.vue'),
   children: [{
-    name: '推广概括',
-    path: '/popularize/survey',
-    component: () => import( /* webpackChunkName: "module-popularize" */ '@/components/popularize/survey.vue'),
+    name: '账户总览',
+    path: '/popularize/accOverview',
+    component: () => import( /* webpackChunkName: "module-popularize" */ '@/components/popularize/accOverview.vue'),
   }]
 }

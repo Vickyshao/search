@@ -8,6 +8,6 @@ export default {
   children: [{
     name: 'hello',
     path: '/hello',
-    component: () => import( /* webpackChunkName: "module-popularize" */ '@/components/popularize/HelloWorld.vue'),
+    // component: () => import( /* webpackChunkName: "module-popularize" */ '@/components/popularize/HelloWorld.vue'),
   }],
 }
