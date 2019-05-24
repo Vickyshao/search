@@ -10,7 +10,7 @@ export default new VueRouter({
   routes: [
     {
     path: '*',
-    redirect: '/shopManage/addGoods'
+    redirect: '/popularize/accOverview'
     },
     // , {
     //   path: '/login',

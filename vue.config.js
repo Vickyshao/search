@@ -9,7 +9,6 @@ module.exports = {
   // publicPath: './',
   outputDir: 'dist',
   runtimeCompiler: false,
-  // compiler: false,
   lintOnSave: process.env.NODE_ENV === 'production' ? true : 'error',
   productionSourceMap: false,
   chainWebpack: (config) => {

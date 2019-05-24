@@ -1,9 +1,9 @@
-import shopList from './shopList';
 import popularize from './popularize';
+import shopList from './shopList';
 import test from './test';
 
 export default [
-  shopList,
   popularize,
+  shopList,
   test,
 ]
